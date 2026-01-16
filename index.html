@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shoreline CS Club — 2026 Roadmap</title>
+    <meta name="description" content="shoreline CS Club" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <main class="wrap">
+
+        <div class="card">
+            <header>
+                <div class="brand">
+                    <div class="logo" aria-hidden="true"></div>
+                    <h1>Shoreline Computer Science Club — 2026 Roadmap</h1>
+                </div>
+                <p>
+                    This page shows our progress and what’s coming next.
+                </p>
+            </header>
+
+            <section class="roadmap">
+                <div class="topRow">
+                    <div class="pill"><span class="dotMini" aria-hidden="true"></span> Current phase: Launching the
+                        website</div>
+                    <div class="pill">Updated: Jan 15, 2026<span id="today"></span></div>
+                </div>
+
+                <div class="timeline" id="timeline">
+                    <!-- Phase 1 = CURRENT (not done yet) -->
+                    <div class="step active" data-status="active">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Phase 1 — Launch the website</div>
+                        <div class="desc">Landing page, basic structure, and a clean first release.</div>
+                        <div class="meta">
+                            <span class="tag">In progress</span>
+                            <span class="tag">Winter</span>
+                            <span class="tag">Domain ready</span>
+                        </div>
+                    </div>
+
+                    <div class="step future" data-status="future">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Phase 2 — Python Basics for Everybody</div>
+                        <div class="desc">a Beginner-friendly course focused on fundamentals and practice.
+                        </div>
+                        <div class="meta">
+                            <span class="tag">Planned</span>
+                            <span class="tag">Spring</span>
+                        </div>
+                    </div>
+
+                    <div class="step future" data-status="future">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Phase 3 — Linux Basics for Everybody</div>
+                        <div class="desc">Linux essentials for security learning and real-world workflows.
+                        </div>
+                        <div class="meta">
+                            <span class="tag">Planned</span>
+                            <span class="tag">Summer</span>
+                        </div>
+                    </div>
+
+                    <div class="step future" data-status="future">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Phase 4 — Launch scclubs.com (club-creation platform)</div>
+                        <div class="desc">A Shopify-like experience for shoreline college clubs: create a club, get a
+                            page, manage members all in one place.</div>
+                        <div class="meta">
+                            <span class="tag">Planned</span>
+                            <span class="tag">Summer</span>
+                            <span class="tag">Big milestone</span>
+                        </div>
+                    </div>
+
+                    <div class="step future" data-status="future">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Phase 5 — three days hackathon Advanced Python + Django</div>
+                        <div class="desc">Build real apps and learn backend development the right way.</div>
+                        <div class="meta">
+                            <span class="tag">Planned</span>
+                            <span class="tag">Fall</span>
+                        </div>
+                    </div>
+
+                    <div class="step future" data-status="future">
+                        <div class="marker" aria-hidden="true"></div>
+                        <div class="title">Final Phase — How to Not Get Hacked</div>
+                        <div class="desc">Security fundamentals: accounts, passwords, phishing, social engineering, and
+                            2FA bypass.</div>
+                        <div class="meta">
+                            <span class="tag">Planned</span>
+                            <span class="tag">Fall</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div>© <span id="year"></span> scc-csclub</div>
+                <div><a href="https://www.instagram.com/scc.csclub">Instagram</a> · <a
+                        href="https://github.com/WalidOumouzoune/scc-csclub">GitHub</a>
+                </div>
+            </footer>
+        </div>
+
+    </main>
+
+    <script>
+        // Date labels
+        // const now = new Date();
+        // document.getElementById("year").textContent = now.getFullYear();
+        // document.getElementById("today").textContent = now.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+
+        // OPTIONAL: "half completed line" look
+        // This sets the vertical line fill to ~20% (since you're on Phase 1 of 6).
+        // If you want it to look more "half", change fill to 50.
+        const totalPhases = 6;
+        const currentPhaseIndex = 1; // phase number you're currently on (1-based)
+        const fillPercent = Math.round(((currentPhaseIndex - 0.5) / totalPhases) * 100);
+        document.getElementById("timeline").style.setProperty("--fill", fillPercent + "%");
+    </script>
+</body>
+
+</html>
